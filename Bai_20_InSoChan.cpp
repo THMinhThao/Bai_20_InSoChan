@@ -1,25 +1,49 @@
-// Bai_20_InSoChan.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// Bai19_InSoNguyenTo.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
 using namespace std;
+bool(kiemtraSNT(int s))
+{
+	int dem = 0;
+	for (int i = 1; i <= s; i++)
+	{
+		if (s % i == 0) 
+		{
+			dem++;
+		}
+	}
+	if (dem == 2)
+	{
+		return true;
+	}
+	else 
+	{
+		return false;
+	}
+}
+bool kiemtraSCP(int x)
+{
+	if (sqrt(x) == (int)sqrt(x)) return true;
+	return false;
 
-int main() {
-    int so, tongchan = 0, tongle = 0, tong = 0;
-    cout << "Nhap so n: "; cin >> so;
-    for (int i = 1; i <= so; i++) {
-        tong += i;
-        if (i % 2 == 0) {
-            cout << i << " ";
-            tongchan += i;
-        }
-        else {
-            tongle += i;
-        }
-    }
+}
+int main()
+{
 
-    cout << "\n Tong cac so: " << tong;
-    cout << "\n Tong cac so chan: " << tongchan;
-    cout << "\n Tong cac so le: " << tongle;
-    return 0;
+	cout << "KIEM TRA SO CO PHAI SO NGUYEN TO KHONG\n";
+	int n;
+	cout << "nhap so: "; cin >> n;
+	for (int y = 1; y <= n; y++)
+	{
+		if (kiemtraSNT(y) == true) cout << y << " ";
+
+	}
+	for (int i = 1; i < 100; i++)
+	{
+		if (sqrt(i) == (int)sqrt(i)) cout << i << "la so chinh phuong\n";
+	}
+
+	return 0;
+
 }
